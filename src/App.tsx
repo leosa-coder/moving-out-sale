@@ -4,6 +4,7 @@ import {
   filterItems,
   formatPrice,
   getStats,
+  getReferenceLabel,
   isInstalmentEligible,
   sortItems,
   type SortMode,
@@ -159,7 +160,7 @@ export default function App() {
                   <strong className="price">{formatPrice(item.price)}</strong>
                   {item.referenceUrl ? (
                     <a className="reference-link" href={item.referenceUrl} target="_blank" rel="noreferrer">
-                      Reference
+                      {getReferenceLabel(item.referenceUrl)}
                       <ExternalLink size={15} aria-hidden="true" />
                     </a>
                   ) : (

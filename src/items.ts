@@ -64,7 +64,7 @@ export const rawRows = [
   {
     "Items": "Washing machine",
     "Description": "Haier\nCurrect cheapest online: \nhttps://appliancesdeals.com.au/products/haier-8-5kg-front-load-washer-hwf85an1?variant=41033796255807&country=AU&currency=AUD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOorTKhB5zYUhwRK7UQv-l1psIhKzgacHIoWzcH3fIIkkgdkAI40LRe8 ($499)",
-    "Selling for": "$200-250"
+    "Selling for": 200
   },
   {
     "Items": "Ironing board with Iron",

@@ -22,6 +22,20 @@ const currencyFormatter = new Intl.NumberFormat("en-AU", {
   currency: "AUD",
   maximumFractionDigits: 0,
 });
+const knownStoreNames: Record<string, string> = {
+  "appliancesdeals.com.au": "Appliances Deals",
+  "babybunting.com.au": "Baby Bunting",
+  "centrecom.com.au": "Centre Com",
+  "desky.com.au": "Desky",
+  "harveynorman.com.au": "Harvey Norman",
+  "iconbydesign.com.au": "Icon By Design",
+  "ikea.com": "IKEA",
+  "loungelovers.com.au": "Lounge Lovers",
+  "officeworks.com.au": "Officeworks",
+  "purewatersystems.com.au": "Pure Water Systems",
+  "secretlabchairs.com.au": "Secretlab",
+  "woolworths.com.au": "Woolworths",
+};
 
 export function extractUrls(text: string): string[] {
   return Array.from(text.matchAll(urlPattern), (match) => match[0].replace(/[.,;:]+$/, ""));
@@ -34,6 +48,32 @@ export function formatPrice(price: string | number): string {
 
   const trimmed = price.trim();
   return trimmed.startsWith("$") ? trimmed : `$${trimmed}`;
+}
+
+export function getReferenceLabel(url: string): string {
+  try {
+    const hostname = new URL(url).hostname.replace(/^www\./, "");
+    const knownName = knownStoreNames[hostname];
+
+    if (knownName) {
+      return `View ${knownName} listing`;
+    }
+
+    const brand = hostname
+      .split(".")
+      .slice(0, -1)
+      .join(" ")
+      .replace(/\bau\b|\bcom\b/gi, "")
+      .trim();
+
+    if (!brand) {
+      return "View original listing";
+    }
+
+    return `View ${toTitleCase(brand)} listing`;
+  } catch {
+    return "View original listing";
+  }
 }
 
 export function getNumericPrice(price: string | number): number | null {
@@ -154,4 +194,12 @@ function slugify(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function toTitleCase(value: string): string {
+  return value
+    .split(/[\s-]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
 }

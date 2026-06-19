@@ -3,6 +3,7 @@ import {
   extractUrls,
   filterItems,
   formatPrice,
+  getReferenceLabel,
   getNumericPrice,
   getStats,
   isInstalmentEligible,
@@ -59,6 +60,18 @@ describe("catalog helpers", () => {
   it("formats numeric and range prices for display", () => {
     expect(formatPrice(4500)).toBe("$4,500");
     expect(formatPrice("$200-250")).toBe("$200-250");
+  });
+
+  it("creates descriptive reference link labels from store URLs", () => {
+    expect(
+      getReferenceLabel(
+        "https://www.harveynorman.com.au/samsung-85-inch-qn800d-neo-qled-8k-mini-led-smart-ai-tv.html",
+      ),
+    ).toBe("View Harvey Norman listing");
+    expect(getReferenceLabel("https://purewatersystems.com.au/products/ro-5u")).toBe(
+      "View Pure Water Systems listing",
+    );
+    expect(getReferenceLabel("not a url")).toBe("View original listing");
   });
 
   it("detects numeric price and instalment eligibility", () => {
