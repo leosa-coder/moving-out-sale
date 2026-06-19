@@ -124,7 +124,8 @@ export const rawRows = [
   {
     "Items": "PS 5 console + extra controller\n+ 3 games",
     "Description": "2020-2021\nCurrect cheapest online: https://www.woolworths.com.au/shop/productdetails/1116439429?srsltid=AfmBOoq0BzWJ9UPB2i8Kd8WE1P7v0oBgQEfBazi86zsmUk6_C9n-sP02kr0 ($899)",
-    "Selling for": 500
+    "Selling for": 500,
+    "Sold": true
   },
   {
     "Items": "Yamaha digital piano with stand and pedal + bench",
@@ -160,7 +161,8 @@ export const rawRows = [
   {
     "Items": "Kids bike with balancers",
     "Description": null,
-    "Selling for": 40
+    "Selling for": 40,
+    "Sold": true
   },
   {
     "Items": "Kids bike with balancers",
