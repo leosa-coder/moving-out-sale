@@ -10,8 +10,7 @@ import {
   type SortMode,
 } from "./catalog";
 import { categories, items } from "./items";
-
-type Theme = "light" | "dark";
+import { resolveInitialTheme, type Theme } from "./theme";
 
 const saleNotes = [
   "Most items include a link to the original store listing for reference. Additional photos are available upon request.",
@@ -21,15 +20,10 @@ const saleNotes = [
 
 function getInitialTheme(): Theme {
   if (typeof window === "undefined") {
-    return "light";
+    return "dark";
   }
 
-  const savedTheme = window.localStorage.getItem("theme");
-  if (savedTheme === "light" || savedTheme === "dark") {
-    return savedTheme;
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return resolveInitialTheme(window.localStorage.getItem("theme"));
 }
 
 export default function App() {

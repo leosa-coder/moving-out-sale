@@ -12,8 +12,16 @@ import {
   type RawRow,
   type SaleItem,
 } from "./catalog";
+import { resolveInitialTheme } from "./theme";
 
 describe("catalog helpers", () => {
+  it("defaults first-time visitors to dark mode", () => {
+    expect(resolveInitialTheme(null)).toBe("dark");
+    expect(resolveInitialTheme(undefined)).toBe("dark");
+    expect(resolveInitialTheme("light")).toBe("light");
+    expect(resolveInitialTheme("dark")).toBe("dark");
+  });
+
   it("extracts URLs from free-form description text", () => {
     const urls = extractUrls(
       "Reference https://example.com/item?sku=123 and backup http://store.test/path.",

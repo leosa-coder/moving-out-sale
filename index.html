@@ -7,6 +7,13 @@
       name="description"
       content="Moving Out Sale catalog of household used items with prices and reference links."
     />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+      })();
+    </script>
     <title>Moving Out Sale</title>
   </head>
   <body>
