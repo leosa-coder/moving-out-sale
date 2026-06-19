@@ -177,7 +177,7 @@ export const rawRows = [
     "Selling for": null
   },
   {
-    "Items": "Ziggler & Brown BBQ",
+    "Items": "Ziegler & Brown BBQ",
     "Description": null,
     "Selling for": 100
   },
