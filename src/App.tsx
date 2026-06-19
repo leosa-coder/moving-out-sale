@@ -144,9 +144,12 @@ export default function App() {
               <article className="item-card" key={item.id}>
                 <div className="card-topline">
                   <span className="category-label">{item.category}</span>
-                  {isInstalmentEligible(item.price) ? (
-                    <span className="instalment-badge">Up to 8 months</span>
-                  ) : null}
+                  <div className="card-badges">
+                    {item.sold ? <span className="sold-badge">Sold</span> : null}
+                    {isInstalmentEligible(item.price) ? (
+                      <span className="instalment-badge">Up to 8 months</span>
+                    ) : null}
+                  </div>
                 </div>
                 <h2>{item.name}</h2>
                 {item.description ? <p className="description">{item.description}</p> : null}

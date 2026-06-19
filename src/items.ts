@@ -134,7 +134,8 @@ export const rawRows = [
   {
     "Items": "Toy storage unit (Ikea - Trofast)",
     "Description": "https://www.ikea.com/au/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-grey-s39606814/",
-    "Selling for": 60
+    "Selling for": 60,
+    "Sold": true
   },
   {
     "Items": "Kids tent (Ikea-Cirkustalt)\nFolding gym mat (Ikea - Passbit)",
@@ -194,7 +195,8 @@ export const rawRows = [
   {
     "Items": "Samsung Air purifier",
     "Description": null,
-    "Selling for": 120
+    "Selling for": 120,
+    "Sold": true
   },
   {
     "Items": "Dehumidifier 1",

@@ -53,6 +53,7 @@ describe("catalog helpers", () => {
         price: 4500,
         originalIndex: 1,
         referenceUrl: "https://example.com/tv",
+        sold: false,
       },
       {
         id: "washing-machine-3",
@@ -61,6 +62,7 @@ describe("catalog helpers", () => {
         description: "Haier",
         price: "$200-250",
         originalIndex: 3,
+        sold: false,
       },
     ]);
   });
@@ -139,6 +141,7 @@ function sampleItems(): SaleItem[] {
       description: "Desky hardwood standing desk",
       price: 1000,
       originalIndex: 1,
+      sold: false,
     },
     {
       id: "dehumidifier-2",
@@ -147,6 +150,7 @@ function sampleItems(): SaleItem[] {
       description: "Ausclimate",
       price: 60,
       originalIndex: 2,
+      sold: false,
     },
     {
       id: "samsung-tv-3",
@@ -155,6 +159,7 @@ function sampleItems(): SaleItem[] {
       description: "8K Mini-LED",
       price: 4500,
       originalIndex: 3,
+      sold: false,
     },
   ];
 }

@@ -341,6 +341,12 @@ h1 {
   gap: 12px;
 }
 
+.card-badges {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
 .category-label,
 .instalment-badge,
 .reference-muted {
@@ -354,11 +360,19 @@ h1 {
 }
 
 .instalment-badge {
-  flex: 0 0 auto;
   border-radius: 999px;
   padding: 6px 9px;
   background: var(--accent-soft);
   color: var(--accent-strong);
+}
+
+.sold-badge {
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: color-mix(in srgb, #e74c3c 18%, transparent);
+  color: #e74c3c;
+  font-size: 0.78rem;
+  font-weight: 800;
 }
 
 .item-card h2 {

@@ -2,6 +2,7 @@ export type RawRow = {
   Items?: string | null;
   Description?: string | null;
   "Selling for"?: string | number | null;
+  Sold?: boolean | null;
 };
 
 export type SaleItem = {
@@ -12,6 +13,7 @@ export type SaleItem = {
   price: string | number;
   originalIndex: number;
   referenceUrl?: string;
+  sold?: boolean;
 };
 
 export type SortMode = "original" | "price-asc" | "price-desc";
@@ -120,6 +122,7 @@ export function normalizeRows(rows: RawRow[]): SaleItem[] {
       description: descriptionWithoutUrls,
       price: typeof price === "number" ? price : normalizeCell(price),
       originalIndex: index,
+      sold: row.Sold === true,
     };
 
     if (referenceUrl) {
