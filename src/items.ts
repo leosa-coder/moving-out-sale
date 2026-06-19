@@ -131,7 +131,8 @@ export const rawRows = [
   {
     "Items": "Yamaha digital piano with stand and pedal + bench",
     "Description": "Yamaha P-145",
-    "Selling for": 400
+    "Selling for": 400,
+    "Sold": true
   },
   {
     "Items": "Toy storage unit (Ikea - Trofast)",
