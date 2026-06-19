@@ -114,7 +114,8 @@ export const rawRows = [
   {
     "Items": "Printer & Scanner",
     "Description": "https://www.officeworks.com.au/shop/officeworks/p/canon-pixma-ts8360bka-multifunction-home-printer-cats8360an",
-    "Selling for": 40
+    "Selling for": 40,
+    "Sold": true
   },
   {
     "Items": "Entertainment & Toys",
