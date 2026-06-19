@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: moving-out-sale
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist

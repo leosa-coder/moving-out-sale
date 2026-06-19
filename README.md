@@ -27,7 +27,10 @@ npm run build
 
 Create a Render **Static Site** from this GitHub repository.
 
+- Root directory: leave blank
 - Build command: `npm install && npm run build`
 - Publish directory: `dist`
 
 The generated `src/items.ts` file is committed, so Render does not need access to the local spreadsheet.
+
+This repo also includes `render.yaml` with the same static-site settings.
