@@ -14,7 +14,8 @@ export const rawRows = [
   {
     "Items": "Sony TV with wall mount brackets",
     "Description": "OLED 65”",
-    "Selling for": 500
+    "Selling for": 500,
+    "Sold": true
   },
   {
     "Items": "Samsung soundbar + 2 rear speakers all with wall mount brackets + Subwoofer",
@@ -65,7 +66,8 @@ export const rawRows = [
   {
     "Items": "Washing machine",
     "Description": "Haier\nCurrect cheapest online: \nhttps://appliancesdeals.com.au/products/haier-8-5kg-front-load-washer-hwf85an1?variant=41033796255807&country=AU&currency=AUD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOorTKhB5zYUhwRK7UQv-l1psIhKzgacHIoWzcH3fIIkkgdkAI40LRe8 ($499)",
-    "Selling for": 200
+    "Selling for": 200,
+    "Sold": true
   },
   {
     "Items": "Ironing board with Iron",
@@ -110,7 +112,8 @@ export const rawRows = [
   {
     "Items": "Sound Blaster Katana V1 soundbar + subwoofer virtual 5.1 surround",
     "Description": "https://www.centrecom.com.au/creative-katana-v2x-tri-amplified-multi-channel-super-x-fi-gaming-soundbar-with-compact-subwoofer?gad_source=1&gad_campaignid=17423751068&gbraid=0AAAAADrCcHoIyFKmSjkOuwcm_-RxVzZbb&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2X94usTE-GR87lDBMNfzqh6GrRRXTWwSLHyDVdStLhRnGcYmkKRMcaAkUbEALw_wcB",
-    "Selling for": 150
+    "Selling for": 150,
+    "Sold": true
   },
   {
     "Items": "Printer & Scanner",
