@@ -34,7 +34,8 @@ export const rawRows = [
   {
     "Items": "Koala 2-3 seater sofa bed",
     "Description": null,
-    "Selling for": 500
+    "Selling for": 500,
+    "Sold": true
   },
   {
     "Items": "2 Ottoman (Grey)",
