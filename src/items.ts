@@ -184,7 +184,8 @@ export const rawRows = [
   {
     "Items": "Outdoor lounge",
     "Description": null,
-    "Selling for": 200
+    "Selling for": 200,
+    "Sold": true
   },
   {
     "Items": "Others",
