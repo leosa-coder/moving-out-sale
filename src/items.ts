@@ -20,7 +20,8 @@ export const rawRows = [
   {
     "Items": "Samsung soundbar + 2 rear speakers all with wall mount brackets + Subwoofer",
     "Description": "Samsung Q Series Q930C 9.1.4 Channel Soundbar with Wireless Subwoofer [2023]",
-    "Selling for": 400
+    "Selling for": 400,
+    "Sold": true
   },
   {
     "Items": "Adsila 2.4m Buffet Unit in NZ Natural Ash",
